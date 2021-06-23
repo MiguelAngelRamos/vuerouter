@@ -16,6 +16,11 @@ const routes = [
     path: '/users',
     name: 'Users',
     component: () => import(/* webpackChunkName: "users" */ '../views/Users.vue')
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'Error404',
+    component: () => import(/* webpackChunkName: "error404" */ '../views/Error404.vue')
   }
 ]
 
